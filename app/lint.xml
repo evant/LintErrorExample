@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="InvalidPackage">
+        <!-- Issue with retrofit, safe to ignore -->
+        <ignore regexp="okio-.*\.jar" />
+        <!-- Issues with data-binding plugin, safe to ignore -->
+        <ignore regexp="compiler-.*\.jar" />
+        <ignore regexp="antlr4-runtime-.*\.jar" />
+        <ignore regexp="ST4-.*\.jar" />
+        <ignore regexp="org\.abego\.treelayout\.core-.*\.jar" />
+    </issue>
+
+    <!-- data-binding attributes don't need prefix -->
+    <issue id="MissingPrefix">
+        <ignore regexp="name|type" />
+    </issue>
+
+    <!-- this should not be triggering but it is, TODO: figure out why -->
+    <issue id="WrongConstant" severity="warning" />
+</lint>
